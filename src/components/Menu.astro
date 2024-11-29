@@ -1,0 +1,22 @@
+<nav
+  class="w-full flex bg-slate-500 bg-opacity-20 backdrop-blur items-center justify-center fixed menu h-8 py-6"
+>
+  <ul class="flex gap-4">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+  </ul>
+</nav>
+
+<style>
+  .menu li {
+    @apply list-none text-xl;
+  }
+
+  .menu a {
+    @apply text-neutral-100 hover:text-green-300;
+  }
+
+  .menu::after {
+    content: "";
+  }
+</style>
