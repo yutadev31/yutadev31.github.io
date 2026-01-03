@@ -1,0 +1,68 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+const links = [
+  {
+    label: "Github",
+    url: "https://github.com/yutadev31",
+    id: "yutadev31",
+  },
+  {
+    label: "Gitlab",
+    url: "https://gitlab.com/yuta31",
+    id: "yuta31",
+  },
+  {
+    label: "CodeBerg",
+    url: "https://codeberg.org/yutadev",
+    id: "yutadev",
+  },
+  {
+    label: "Twitter",
+    url: "https://x.com/yuta256dev",
+    id: "yuta256dev",
+  },
+  {
+    label: "Qiita",
+    url: "https://qiita.com/yutadev31",
+    id: "yutadev31",
+  },
+  {
+    label: "Zenn",
+    url: "https://zenn.dev/yutalinux",
+    id: "yutalinux",
+  },
+];
+---
+
+<Layout title="Yuta's Portfolio" lang="en">
+  <Header />
+  <main class="flex-1 max-w-xl w-full mx-auto">
+    <div class="flex flex-wrap w-full gap-2">
+      {
+        links.map((link) => {
+          return (
+            <a
+              href={link.url}
+              class="w-full px-4 py-2 bg-zinc-100 card rounded-lg group"
+            >
+              <p class="text-lg group-hover:text-blue-500 transition-all">
+                {link.label}
+              </p>
+              <p class="text-zinc-400 text-sm">@{link.id}</p>
+            </a>
+          );
+        })
+      }
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .card {
+    width: calc(50% - 4px);
+  }
+</style>
