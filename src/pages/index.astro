@@ -52,12 +52,14 @@ const links = [
           return (
             <a
               href={link.url}
-              class="card group w-full rounded-lg bg-zinc-100 px-4 py-2"
+              class="card group w-full rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800"
             >
-              <p class="text-lg transition-all group-hover:text-blue-500">
+              <p class="text-lg text-slate-800 transition-all group-hover:text-blue-500 dark:text-white dark:group-hover:text-blue-400">
                 {link.label}
               </p>
-              <p class="text-sm text-zinc-400">@{link.id}</p>
+              <p class="text-sm text-slate-400 dark:text-slate-500">
+                @{link.id}
+              </p>
             </a>
           );
         })
