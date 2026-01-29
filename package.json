@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.16.15",
+    "astro": "^5.16.16",
     "install": "^0.13.0",
     "tailwindcss": "^4.1.18"
   },
