@@ -41,31 +41,21 @@ const links = [
   <Header />
   <main class="mx-auto w-full max-w-xl flex-1">
     <h2 class="mb-4 text-2xl font-bold">SNS Links</h2>
-    <div class="flex w-full flex-wrap gap-2">
+    <div class="grid w-full grid-cols-2 gap-2">
       {
-        links.map((link) => {
-          return (
-            <a
-              href={link.url}
-              class="card group w-full rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800"
-            >
-              <p class="text-lg text-slate-800 transition-all group-hover:text-blue-500 dark:text-white dark:group-hover:text-blue-400">
-                {link.label}
-              </p>
-              <p class="text-sm text-slate-400 dark:text-slate-500">
-                @{link.id}
-              </p>
-            </a>
-          );
-        })
+        links.map((link) => (
+          <a
+            href={link.url}
+            class="group w-full rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800"
+          >
+            <p class="text-lg text-slate-800 transition-all group-hover:text-blue-500 dark:text-white dark:group-hover:text-blue-400">
+              {link.label}
+            </p>
+            <p class="text-sm text-slate-400 dark:text-slate-500">@{link.id}</p>
+          </a>
+        ))
       }
     </div>
   </main>
   <Footer />
 </Layout>
-
-<style>
-  .card {
-    width: calc(50% - 4px);
-  }
-</style>
