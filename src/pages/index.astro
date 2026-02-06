@@ -39,14 +39,16 @@ const links = [
 
 <Layout title="Yuta's Portfolio" lang="en">
   <Header />
-  <main class="mx-auto w-full max-w-xl flex-1">
+  <main
+    class="mx-auto w-full max-w-xl flex-1 rounded-md bg-slate-50 p-4 dark:bg-slate-900"
+  >
     <h2 class="mb-4 text-2xl font-bold">SNS Links</h2>
     <div class="grid w-full grid-cols-2 gap-2">
       {
         links.map((link) => (
           <a
             href={link.url}
-            class="group w-full rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800"
+            class="group w-full rounded-lg border border-slate-300 px-4 py-2 shadow dark:border-slate-600 dark:bg-slate-900"
           >
             <p class="text-lg text-slate-800 transition-all group-hover:text-blue-500 dark:text-white dark:group-hover:text-blue-400">
               {link.label}
