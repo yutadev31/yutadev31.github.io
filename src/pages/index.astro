@@ -1,63 +1,10 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Links from "../components/Links.astro";
 import Layout from "../layouts/Layout.astro";
-
-const links = [
-  {
-    label: "Github",
-    url: "https://github.com/yutadev31",
-    id: "yutadev31",
-  },
-  {
-    label: "Gitlab",
-    url: "https://gitlab.com/yuta31",
-    id: "yuta31",
-  },
-  {
-    label: "CodeBerg",
-    url: "https://codeberg.org/yutadev",
-    id: "yutadev",
-  },
-  {
-    label: "Twitter",
-    url: "https://x.com/yuta256dev",
-    id: "yuta256dev",
-  },
-  {
-    label: "Qiita",
-    url: "https://qiita.com/yutadev31",
-    id: "yutadev31",
-  },
-  {
-    label: "Zenn",
-    url: "https://zenn.dev/yutalinux",
-    id: "yutalinux",
-  },
-];
 ---
 
 <Layout title="Yuta's Portfolio" lang="en">
-  <Header />
-  <div class="flex-1">
-    <main class="mx-auto w-full max-w-xl rounded-md px-4">
-      <h2 class="mb-4 text-2xl font-bold">SNS Links</h2>
-      <div class="grid w-full grid-cols-2 gap-2">
-        {
-          links.map((link) => (
-            <a
-              href={link.url}
-              class="group w-full rounded-lg border border-slate-200 px-4 py-2 shadow dark:border-slate-700 dark:bg-slate-950"
-            >
-              <p class="text-lg text-slate-800 transition-all group-hover:text-blue-500 dark:text-white dark:group-hover:text-blue-400">
-                {link.label}
-              </p>
-              <p class="text-sm text-slate-400">@{link.id}</p>
-            </a>
-          ))
-        }
-      </div>
-    </main>
-  </div>
-  <Footer />
+  <h2 class="mb-2 text-2xl font-bold">About me</h2>
+  <p>I'm <b>Yuta</b>, a hobbyist software developer from Japan.</p>
+  <Links />
 </Layout>

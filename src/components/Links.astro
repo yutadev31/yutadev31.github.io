@@ -1,0 +1,51 @@
+---
+const links = [
+  {
+    label: "Github",
+    url: "https://github.com/yutadev31",
+    id: "yutadev31",
+  },
+  {
+    label: "Gitlab",
+    url: "https://gitlab.com/yuta31",
+    id: "yuta31",
+  },
+  {
+    label: "CodeBerg",
+    url: "https://codeberg.org/yutadev",
+    id: "yutadev",
+  },
+  {
+    label: "Twitter",
+    url: "https://x.com/yuta256dev",
+    id: "yuta256dev",
+  },
+  {
+    label: "Qiita",
+    url: "https://qiita.com/yutadev31",
+    id: "yutadev31",
+  },
+  {
+    label: "Zenn",
+    url: "https://zenn.dev/yutalinux",
+    id: "yutalinux",
+  },
+];
+---
+
+<h2 class="mt-4 mb-2 text-2xl font-bold">SNS Links</h2>
+<div class="grid w-full grid-cols-2 gap-2">
+  {
+    links.map((link) => (
+      <a
+        href={link.url}
+        class="group w-full rounded-lg border border-slate-200 px-4 py-2 shadow dark:border-slate-700 dark:bg-slate-950"
+      >
+        <p class="text-lg text-slate-800 transition-all group-hover:text-blue-500 dark:text-white dark:group-hover:text-blue-400">
+          {link.label}
+        </p>
+        <p class="text-sm text-slate-400">@{link.id}</p>
+      </a>
+    ))
+  }
+</div>
