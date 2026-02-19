@@ -15,7 +15,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.2",
     "install": "^0.13.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.1",
