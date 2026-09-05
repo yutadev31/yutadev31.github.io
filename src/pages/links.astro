@@ -1,0 +1,181 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout>
+  <Navigation />
+
+  <main>
+    <h1>Links</h1>
+
+    <section>
+      <h2>Social</h2>
+
+      <div class="links">
+        <a class="link" href="https://x.com/yuta256dev">
+          <div>
+            <div class="link-name">X</div>
+            <div class="username">@yuta256dev</div>
+          </div>
+
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="https://bsky.app/profile/yuta256.bsky.social">
+          <div>
+            <div class="link-name">Bluesky</div>
+            <div class="username">@yuta256.bsky.social</div>
+          </div>
+
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="https://www.reddit.com/user/yuta256dev/">
+          <div>
+            <div class="link-name">Reddit</div>
+            <div class="username">u/yuta256dev</div>
+          </div>
+
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Development</h2>
+
+      <div class="links">
+        <a class="link" href="https://github.com/yutadev31">
+          <div>
+            <div class="link-name">GitHub</div>
+            <div class="username">yutadev31</div>
+          </div>
+
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="https://gitlab.com/yuta31">
+          <div>
+            <div class="link-name">GitLab</div>
+            <div class="username">yuta31</div>
+          </div>
+
+          <span class="arrow">↗</span>
+        </a>
+
+        <a class="link" href="https://codeberg.org/yutadev">
+          <div>
+            <div class="link-name">Codeberg</div>
+            <div class="username">yutadev</div>
+          </div>
+
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    box-sizing: border-box;
+    display: grid;
+    width: min(100% - 3rem, 42rem);
+    margin: 0 auto;
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    gap: 3.5rem;
+  }
+
+  h1 {
+    margin: 0;
+    color: #f0f6fc;
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+
+  section {
+    display: grid;
+    gap: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    color: #f0f6fc;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .links {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 4.5rem;
+    border: 1px solid rgb(240 246 252 / 10%);
+    padding: 0.875rem 1rem 0.875rem 1.25rem;
+    color: inherit;
+    background: rgb(240 246 252 / 3%);
+    text-decoration: none;
+    transition:
+      border-color 160ms ease,
+      background-color 160ms ease,
+      transform 160ms ease;
+  }
+
+  .link:hover {
+    border-color: rgb(88 166 255 / 55%);
+    background: rgb(88 166 255 / 9%);
+  }
+
+  .link-name {
+    color: #f0f6fc;
+    font-size: 1rem;
+    font-weight: 650;
+  }
+
+  .username {
+    margin-top: 0.2rem;
+    color: #8b949e;
+    font-size: 0.9rem;
+  }
+
+  .arrow {
+    color: #58a6ff;
+    font-size: 1.35rem;
+    line-height: 1;
+    transition: transform 160ms ease;
+  }
+
+  .link:focus-visible {
+    outline: 2px solid #58a6ff;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 32rem) {
+    main {
+      width: min(100% - 2rem, 42rem);
+      padding-top: 2.5rem;
+      gap: 2.75rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link,
+    .arrow {
+      transition: none;
+    }
+  }
+</style>

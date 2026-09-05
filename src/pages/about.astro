@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<Layout>
+  <Navigation />
+
+  <main>
+    <h1>About</h1>
+
+    <section aria-labelledby="profile-heading">
+      <h2 id="profile-heading">Profile</h2>
+      <dl class="details">
+        <div>
+          <dt>Name</dt>
+          <dd>Yuta</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>Software Developer &amp; Student</dd>
+        </div>
+        <div>
+          <dt>Location</dt>
+          <dd>Japan</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="interests-heading">
+      <h2 id="interests-heading">Interests</h2>
+      <ul class="interests">
+        <li>Systems programming</li>
+        <li>Unix-like operating systems</li>
+        <li>Web development</li>
+        <li>Open source software</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="technologies-heading">
+      <h2 id="technologies-heading">Technologies</h2>
+      <dl class="technologies">
+        <div>
+          <dt>Languages</dt>
+          <dd>Rust · TypeScript · Python</dd>
+        </div>
+        <div>
+          <dt>Web</dt>
+          <dd>React · Tailwind CSS</dd>
+        </div>
+        <div>
+          <dt>Systems</dt>
+          <dd>Linux · NixOS</dd>
+        </div>
+        <div>
+          <dt>Tools</dt>
+          <dd>Git · Neovim · Docker · QEMU</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="eeadionment-heading">
+      <h2 id="environment-heading">Environment</h2>
+      <dl class="details">
+        <div>
+          <dt>OS</dt>
+          <dd>NixOS</dd>
+        </div>
+        <div>
+          <dt>WM</dt>
+          <dd>Hyprland</dd>
+        </div>
+        <div>
+          <dt>Shell</dt>
+          <dd>Fish</dd>
+        </div>
+        <div>
+          <dt>Editor</dt>
+          <dd>Neovim</dd>
+        </div>
+        <div>
+          <dt>Terminal</dt>
+          <dd>Alacritty</dd>
+        </div>
+        <div>
+          <dt>Browser</dt>
+          <dd>Zen Browser</dd>
+        </div>
+      </dl>
+      <a
+        class="environment-link"
+        href="https://github.com/yutadev31/dotfiles.git"
+      >
+        Learn more <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    box-sizing: border-box;
+    display: grid;
+    width: min(100% - 3rem, 42rem);
+    margin: 0 auto;
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    gap: 3.5rem;
+  }
+
+  h1 {
+    margin: 0;
+    color: #f0f6fc;
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+
+  section {
+    display: grid;
+    gap: 1rem;
+  }
+
+  h2 {
+    margin: 0;
+    color: #f0f6fc;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .details,
+  .technologies {
+    display: grid;
+    margin: 0;
+    border-top: 1px solid rgb(240 246 252 / 10%);
+  }
+
+  .details > div,
+  .technologies > div {
+    display: grid;
+    grid-template-columns: minmax(7.5rem, 35%) 1fr;
+    gap: 1rem;
+    border-bottom: 1px solid rgb(240 246 252 / 10%);
+    padding: 0.875rem 0;
+  }
+
+  dt {
+    color: #8b949e;
+    font-size: 0.9rem;
+  }
+
+  dd {
+    margin: 0;
+    color: #f0f6fc;
+    font-size: 0.95rem;
+  }
+
+  .environment-link {
+    width: fit-content;
+    color: #58a6ff;
+    font-size: 0.95rem;
+    text-decoration: none;
+  }
+
+  .environment-link:hover,
+  .environment-link:focus-visible {
+    text-decoration: underline;
+  }
+
+  .interests {
+    display: grid;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .interests li {
+    position: relative;
+    padding-left: 1rem;
+    color: #c9d1d9;
+  }
+
+  .interests li::before {
+    position: absolute;
+    left: 0;
+    color: #58a6ff;
+    content: "•";
+  }
+
+  @media (max-width: 32rem) {
+    main {
+      width: min(100% - 2rem, 42rem);
+      padding-top: 2.5rem;
+      gap: 2.75rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .details > div,
+    .technologies > div {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+  }
+</style>
