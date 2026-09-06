@@ -1,11 +1,34 @@
 <header class="site-header">
   <nav class="navigation" aria-label="Main navigation">
-    <a class="brand" href="/" aria-current="page">Yuta</a>
+    <a
+      class="brand"
+      href="/"
+      aria-current={Astro.url.pathname === "/" ? "page" : undefined}>Yuta</a
+    >
     <ul>
-      <li><a href="/about">About</a></li>
-      <li><a href="/links">Links</a></li>
+      <li>
+        <a
+          href="/about"
+          aria-current={Astro.url.pathname === "/about" ? "page" : undefined}
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          href="/blog"
+          aria-current={Astro.url.pathname.startsWith("/blog")
+            ? "page"
+            : undefined}>Blog</a
+        >
+      </li>
+      <li>
+        <a
+          href="/links"
+          aria-current={Astro.url.pathname === "/links" ? "page" : undefined}
+          >Links</a
+        >
+      </li>
       <!-- <li><a href="/projects">Projects</a></li> -->
-      <!-- <li><a href="/blog">Blog</a></li> -->
     </ul>
   </nav>
 </header>
