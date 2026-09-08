@@ -6,7 +6,7 @@ interface Props {
 
 const {
   title = "Yuta's Website",
-  description = "The personal website of Yuta, a software developer and student.",
+  description = "The personal website of Yuta (yutadev31, yuta256dev, yutadev, yuta31), a software developer and student.",
 } = Astro.props;
 ---
 
@@ -21,6 +21,19 @@ const {
       name="google-site-verification"
       content="YfGY2IUXnG1rRkJNLUfyYcopokIFugM3vJAn3tknWnI"
     />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yuta",
+      "alternateName": [
+        "yutadev31",
+        "yuta31",
+        "yuta256dev"
+      ],
+      "url": "https://yutadev31.github.io/"
+    }
+    </script>
     <title>{title}</title>
   </head>
   <body>
